@@ -17,10 +17,18 @@ const orm = {
       }
     );
   },
-  updateOne(tableName, columnValObject, condition, callback) {
+  updateOne(
+    tableName,
+    columname,
+    columnvalue,
+    conditioncolumn,
+    conditionvalue,
+    callback
+  ) {
+    console.log(tableName);
     connection.query(
-      "UPDATE ?? SET ?? WHERE ?",
-      [tableName, columnValObject, condition],
+      "UPDATE ?? SET ?? = ? WHERE ?? = ?",
+      [tableName, columname, columnvalue, conditioncolumn, conditionvalue],
       (err, res) => {
         if (err) throw err;
         callback(res);

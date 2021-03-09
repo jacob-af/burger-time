@@ -8,7 +8,8 @@ const burgers = {
     orm.insertOne("burgers", "burger_name", burgerName, (res) => callback(res));
   },
   devourOne(burgerId, callback) {
-    orm.updateOne("burgers", { devoured: "false" }, { id: burgerId }, (res) =>
+    console.log(burgerId);
+    orm.updateOne("burgers", "devoured", 1, "id", burgerId, (res) =>
       callback(res)
     );
   },

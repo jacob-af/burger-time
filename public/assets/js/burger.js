@@ -3,7 +3,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.info("DOM loaded");
   }
 
-  const devourBurgerButton = document.querySelectorAll("devour-burger");
+  const devourBurgerButton = document.querySelectorAll(".devour-burger");
+
+  if (devourBurgerButton) {
+    devourBurgerButton.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        // Grabs the id of the element that goes by the name, "id"
+        const id = e.target.getAttribute("data-id");
+
+        fetch(`/api/burgers/${id}`, {
+          method: "PUT",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }).then((response) => {
+          if (response.ok) {
+            console.log(`changed burger to: devoured`);
+            location.reload("/");
+          } else {
+            alert("something went wrong!");
+          }
+        });
+      });
+    });
+  }
 
   const addBurger = document.getElementById("burger-form");
 
