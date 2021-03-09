@@ -1,0 +1,27 @@
+{
+  "name": "burger-time",
+  "version": "1.0.0",
+  "description": "It's Burger Time!",
+  "main": "servers.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacob-af/burger-time.git"
+  },
+  "author": "Jacob A F",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacob-af/burger-time/issues"
+  },
+  "homepage": "https://github.com/jacob-af/burger-time#readme"
+}

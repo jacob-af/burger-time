@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       };
 
       // Send POST request to create a new quote
-      fetch("/api/cats", {
+      fetch("/api/burgers", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("add_burger").value = "";
 
         // Reload the page so the user can see the new quote
-        console.log("Created a new cat!");
+        console.log("Created a new burger!");
         location.reload();
       });
     });
