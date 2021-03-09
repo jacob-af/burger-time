@@ -7,12 +7,9 @@ const burgers = {
   addBurger(burgerName, callback) {
     orm.insertOne("burgers", "burger_name", burgerName, (res) => callback(res));
   },
-  devourOne(burgerName, burgerId, callback) {
-    orm.updateOne(
-      "burgers",
-      { burger_name: burgerName },
-      { id: burgerId },
-      (res) => callback(res)
+  devourOne(burgerId, callback) {
+    orm.updateOne("burgers", { devoured: "false" }, { id: burgerId }, (res) =>
+      callback(res)
     );
   },
 };
