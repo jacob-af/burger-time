@@ -12,17 +12,19 @@ router.get("/", (req, res) => {
   });
 });
 
-router.post("/api/burger", (req, res) => {
+router.post("/api/burgers", (req, res) => {
   burgers.addBurger(req.body.name, req.body.id, (data) => {
     res.json(data);
   });
 });
 
 router.put("/api/burger/:id", (req, res) => {
-  burgers.devourOne(req.params.id, (data) => {
+  burgers.devourOne(req.params.id, (result) => {
     if (result.changedRows === 0) {
       return res.status(404).end();
     }
     res.status(200).end();
   });
 });
+
+module.exports = router;
