@@ -1,29 +1,31 @@
 {
   "name": "burger-time",
   "version": "1.0.0",
-  "description": "It's Burger Time!",
+  "description": "full-stack mysql express",
   "main": "servers.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "mysql2": "^2.2.5"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon server.js",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jacob-af/burger-time.git"
   },
-  "author": "Jacob A F",
-  "license": "ISC",
+  "keywords": [
+    "burgers",
+    "mysql",
+    "express",
+    "node.js",
+    "handlebars"
+  ],
+  "author": "Jacob Feitler",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jacob-af/burger-time/issues"
   },
-  "homepage": "https://github.com/jacob-af/burger-time#readme"
+  "homepage": "https://github.com/jacob-af/burger-time#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql2": "^2.2.5"
+  }
 }
