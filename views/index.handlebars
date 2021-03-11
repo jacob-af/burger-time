@@ -19,29 +19,29 @@
     <div class="row justify-content-between">
         <div class="col-5 left justify-content-center">
             <h2 class="text-center">Burgers to try!</h2>
-            <div>
-                {{#each burgers}}
-                {{#unless devoured}}
-                <div class="row left-row justify-content-between">
-                    <p>{{this.id}}. {{this.burger_name}}</p>
-                    <button class="devour-burger" data-id="{{this.id}}" devoured="{{this.devoured}}">Devour It!</button>
-                </div>
-                {{/unless}}
-                {{/each}}
+            <img src="/assets/images/cute-burger.png" <div>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <div class="row left-row justify-content-between">
+                <p>{{this.id}}. {{this.burger_name}}</p>
+                <button class="devour-burger" data-id="{{this.id}}" devoured="{{this.devoured}}">Devour It!</button>
             </div>
-        </div>
-
-        <div class="col-5 right justify-content-center">
-            <h2 class="text-center">Devoured Burgers</h2>
-            <div>
-                {{#each burgers}}
-                {{#if devoured}}
-                <div class="row right-row">
-                    <p>{{this.id}}. {{this.burger_name}}</p>
-                </div>
-                {{/if}}
-                {{/each}}
-            </div>
+            {{/unless}}
+            {{/each}}
         </div>
     </div>
+
+    <div class="col-5 right justify-content-center">
+        <h2 class="text-center">Devoured Burgers</h2>
+        <div>
+            {{#each burgers}}
+            {{#if devoured}}
+            <div class="row right-row">
+                <p>{{this.id}}. {{this.burger_name}}</p>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</div>
 </div>
