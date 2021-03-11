@@ -1,10 +1,12 @@
 <header>
     <h1 class="text-center">It's Burger Time!</h1>
+    <img class="cute-burger" src="/assets/images/cute-burger.png" />
 </header>
 
 <div class="container">
     <div class="row justify-content-center">
         <h2 class="text-center pt-5">What's the name of this Burger?</h2>
+
     </div>
     <div class="row justify-content-center">
         <div>
@@ -19,29 +21,30 @@
     <div class="row justify-content-between">
         <div class="col-5 left justify-content-center">
             <h2 class="text-center">Burgers to try!</h2>
-            <img src="/assets/images/cute-burger.png" <div>
-            {{#each burgers}}
-            {{#unless devoured}}
-            <div class="row left-row justify-content-between">
-                <p>{{this.id}}. {{this.burger_name}}</p>
-                <button class="devour-burger" data-id="{{this.id}}" devoured="{{this.devoured}}">Devour It!</button>
-            </div>
-            {{/unless}}
-            {{/each}}
-        </div>
-    </div>
 
-    <div class="col-5 right justify-content-center">
-        <h2 class="text-center">Devoured Burgers</h2>
-        <div>
-            {{#each burgers}}
-            {{#if devoured}}
-            <div class="row right-row">
-                <p>{{this.id}}. {{this.burger_name}}</p>
+            <div>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <div class="row left-row justify-content-between">
+                    <p>{{this.id}}. {{this.burger_name}}</p>
+                    <button class="devour-burger" data-id="{{this.id}}" devoured="{{this.devoured}}">Devour It!</button>
+                </div>
+                {{/unless}}
+                {{/each}}
             </div>
-            {{/if}}
-            {{/each}}
+        </div>
+
+        <div class="col-5 right justify-content-center">
+            <h2 class="text-center">Devoured Burgers</h2>
+            <div>
+                {{#each burgers}}
+                {{#if devoured}}
+                <div class="row right-row">
+                    <p>{{this.id}}. {{this.burger_name}}</p>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
         </div>
     </div>
-</div>
 </div>

@@ -20,6 +20,13 @@ button {
     margin-right: 10px;
 }
 
+.cute-burger {
+    height: 100px;
+    width: 100px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+
 .left {
     background-color: #74A753;
     border: 3px solid #3D2B23;
